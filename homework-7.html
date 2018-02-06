@@ -1,0 +1,98 @@
+
+<!-- saved from url=(0061)https://cs.harding.edu/gfoust/classes/comp431/homework07.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./homework-7_files/standard.css" type="text/css">
+    <title>Comp 431: Homework</title>
+    <script type="text/javascript" src="./homework-7_files/shCore.js"></script><style></style>
+    <script type="text/javascript" src="./homework-7_files/shBrushJScript.js"></script>
+    <script type="text/javascript" src="./homework-7_files/shBrushXml.js"></script>
+    <script type="text/javascript" src="./homework-7_files/shBrushHandlebars.js"></script>
+    <script type="text/javascript" src="./homework-7_files/shBrushJScript.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.defaults.gutter = false;
+      SyntaxHighlighter.all();
+    </script>
+    <link type="text/css" rel="stylesheet" href="./homework-7_files/shCore.css">
+    <link type="text/css" rel="stylesheet" href="./homework-7_files/shThemeFoust.css">
+    <!--<base target="_top">--><base href="." target="_top">
+    <style>
+      .example p { margin-top: 0; }
+      .codeblock { background-color: #ffd; padding: 1em; border: 1px solid #008; }
+      .keyword   { color: #00f; font-weight: bold;  }
+      .string    { color: #800; }
+      .comment   { color: #080; font-style: italic; }
+      .identifier{ color: #880; }
+      .operator  { color: #008; }
+      .delimiter { color: #888; }
+    </style>
+  </head>
+  <body>
+    <p>
+      You are to write the following Handlebars helpers.
+    </p>
+    <ol>
+      <li>
+        Write a helper named <code>copyright</code>.  The helper should take
+        one argument: the name of the copyright holder.  The helper should
+        result in the user seeing "©<var>year</var> <var>name</var>,"
+        where <var>year</var> is the current year and <var>name</var> is the
+        value of the parameter.
+<div><div id="highlighter_196542" class="syntaxhighlighter nogutter  htmlscript"><div class="toolbar"><span><a href="https://cs.harding.edu/gfoust/classes/comp431/homework07.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">&lt;</code><code class="htmlscript keyword">p</code><code class="htmlscript plain">&gt;Here's a deep thought: do caterpillars use toothbrushes?&lt;/</code><code class="htmlscript keyword">p</code><code class="handlebars plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="handlebars script">{{</code><code class="handlebars special">copyright</code> <code class="handlebars string">"Gabriel Foust"</code><code class="handlebars script">}}</code></div></div></td></tr></tbody></table></div></div>
+<div class="example">
+<p>Here's a deep thought: do caterpillars use toothbrushes?</p>
+©2017 Gabriel Foust
+</div>
+        <ul>
+          <li>
+            You should display the copyright symbol using
+            the <code>&amp;copy;</code> HTML entity.
+          </li>
+          <li>
+            You should get the current year by creating a new JavaScript date
+            object (if you don't specify a date when you construct a date
+            object it defaults to the current date), then using
+            its <code>getFullYear</code> method.
+<div><div id="highlighter_725997" class="syntaxhighlighter nogutter  js"><div class="toolbar"><span><a href="https://cs.harding.edu/gfoust/classes/comp431/homework07.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">d = </code><code class="js keyword">new</code> <code class="js plain">Date();</code></div><div class="line number2 index1 alt1"><code class="js keyword">var</code> <code class="js plain">year = d.getFullYear();</code></div></div></td></tr></tbody></table></div></div>
+          </li>
+        </ul>
+      </li>
+      <li>Write a helper named <code>codeblock</code>.  The helper should
+        print the contents of the block expression in a <code>&lt;pre
+        class="codeblock"&gt;</code> tag and break it into tokens.  Each token
+        should be wrapped in a <code>&lt;span
+        class="<var>className</var>"&gt;</code> tag with the appropriate class
+        name.
+<div><div id="highlighter_715180" class="syntaxhighlighter nogutter  htmlscript"><div class="toolbar"><span><a href="https://cs.harding.edu/gfoust/classes/comp431/homework07.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">&lt;</code><code class="htmlscript keyword">p</code><code class="htmlscript plain">&gt;Here's some JavaScript code&lt;/</code><code class="htmlscript keyword">p</code><code class="handlebars plain">&gt;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="handlebars script">{{</code><code class="handlebars script">#</code><code class="handlebars keyword">codeblock</code><code class="handlebars script">}}</code></div><div class="line number4 index3 alt1"><code class="handlebars plain">// Import express library</code></div><div class="line number5 index4 alt2"><code class="handlebars plain">var express = require('express');</code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="handlebars plain">// Create express application</code></div><div class="line number8 index7 alt1"><code class="handlebars plain">var app = express();</code></div><div class="line number9 index8 alt2"><code class="handlebars script">{{</code><code class="handlebars script">/</code><code class="handlebars keyword">codeblock</code><code class="handlebars script">}}</code></div></div></td></tr></tbody></table></div></div>
+        The above template should render as shown below.  (You may view the
+        page source to see the HTML created for this example.)
+<div class="example">
+<p>Here's some JavaScript code</p>
+<pre class="codeblock"><span class="comment">// Import express library</span><span class="whitespace">
+</span><span class="keyword">var</span><span class="whitespace"> </span><span class="identifier">express</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">require</span><span class="delimiter">(</span><span class="string">'express'</span><span class="delimiter">)</span><span class="delimiter">;</span><span class="whitespace">
+
+</span><span class="comment">// Create express application</span><span class="whitespace">
+</span><span class="keyword">var</span><span class="whitespace"> </span><span class="identifier">app</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">express</span><span class="delimiter">(</span><span class="delimiter">)</span><span class="delimiter">;</span>
+</pre>
+</div>
+        <ul>
+          <li>
+            Use my <a href="https://cs.harding.edu/gfoust/classes/comp431/tokens.js">tokens.js</a> file as a reference for
+            breaking the string into tokens.
+          </li>
+          <li>
+            Modify the loop so that when a token is found, instead of printing
+            it to the console you wrap it in a span tag and concatenate it to
+            the result.
+          </li>
+          <li>
+            The token styles must come from a style sheet.
+            The <code>codeblock</code> helper is <em>not</em> responsible for
+            this stylesheet; all the helper does is make sure the tokens have
+            the appropriate class name.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  
+
+</body></html>
