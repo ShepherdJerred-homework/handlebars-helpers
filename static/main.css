@@ -1,0 +1,31 @@
+.codeblock {
+    background-color: #ffd;
+    padding: 1em;
+    border: 1px solid #008;
+}
+
+.keyword {
+    color: #00f;
+    font-weight: bold;
+}
+
+.string {
+    color: #800;
+}
+
+.comment {
+    color: #080;
+    font-style: italic;
+}
+
+.identifier {
+    color: #880;
+}
+
+.operator {
+    color: #008;
+}
+
+.delimiter {
+    color: #888;
+}

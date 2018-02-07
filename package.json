@@ -2,9 +2,10 @@
   "name": "handlebars-helpers",
   "version": "1.0.0",
   "description": "Practice with handlebars helper functions",
-  "main": "lib/app/index.js",
+  "main": "lib/app/server",
   "scripts": {
-  	"link": "eslint lib/app/"
+    "dev": "nodemon lib/app/server",
+    "lint": "eslint lib/app/"
   },
   "repository": {
     "type": "git",
