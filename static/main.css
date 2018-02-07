@@ -1,5 +1,5 @@
 .codeblock {
-    background-color: #ffd;
+    background-color: #ffe;
     padding: 1em;
     border: 1px solid #008;
 }
@@ -19,7 +19,7 @@
 }
 
 .identifier {
-    color: #880;
+    color: #330;
 }
 
 .operator {
@@ -28,4 +28,12 @@
 
 .delimiter {
     color: #888;
+}
+
+.regex {
+    color: #099;
+}
+
+.property {
+    color: #909;
 }
