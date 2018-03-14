@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShepherdJerred-homework/handlebars-helpers.git"
+    "url": "git+https://github.com/ShepherdJerred-homework/handlebars-practice.git"
   },
   "author": "Jerred Shepherd",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ShepherdJerred-homework/handlebars-helpers/issues"
+    "url": "https://github.com/ShepherdJerred-homework/handlebars-practice/issues"
   },
-  "homepage": "https://github.com/ShepherdJerred-homework/handlebars-helpers#readme",
+  "homepage": "https://github.com/ShepherdJerred-homework/handlebars-practice#readme",
   "dependencies": {
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
